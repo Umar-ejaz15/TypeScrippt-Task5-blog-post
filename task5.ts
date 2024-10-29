@@ -1,0 +1,56 @@
+// Create Interfaces for a Blog Post:
+
+// Define an interface Author with properties like name, email, and bio.
+// Define another interface post with properties like title, content, date, and an author of type Author.
+
+interface Author {
+  name: string;
+  email: string;
+  bio: string;
+}
+interface post {
+  title: string;
+  content: string;
+  date: Date;
+  author: Author;
+}
+// Create an array of post objects with different authors.
+const blogs: post[] = [
+  {
+    title: "Blog Post 1",
+    content: "This is the content of Blog Post 1.",
+    date: new Date(),
+    author: {
+      name: "John Doe",
+      email: "john@example.com",
+      bio: "A passionate writer.",
+    },
+  },
+  {
+    title: "Blog Post 2",
+    content: "This is the content of Blog Post 2.",
+    date: new Date(),
+    author: {
+      name: "Jane Smith",
+      email: "jane@example.com",
+      bio: "A tech enthusiast.",
+    },
+  },
+  {
+    title: "Blog Post 3",
+    content: "This is the content of Blog Post 3.",
+    date: new Date(),
+    author: {
+      name: "Alice Johnson",
+      email: "alice@example.com",
+      bio: "A creative mind.",
+    },
+  },
+];
+// Iterate through the array and display the blog posts with their authors.
+for (const post of blogs) {
+  console.log("Title:", post.title);
+  console.log("Content:", post.content);
+  console.log("Date:", post.date);
+  console.log("Author:", post.author.name);
+}
